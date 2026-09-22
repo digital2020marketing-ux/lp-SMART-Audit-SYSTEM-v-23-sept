@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="hero-mockup-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Gold Accent -->
+    <linearGradient id="gold-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Tablet Screen Gradient -->
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="60%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+
+    <!-- Glass Overlay -->
+    <linearGradient id="glass-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow-main" x="-20%" y="-20%" width="140%" height="150%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+    <filter id="shadow-card" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+    <filter id="glow-badge" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#fbbf24" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <rect width="720" height="460" rx="20" fill="url(#hero-mockup-bg)"/>
+  
+  <!-- Subtle Grid Accent -->
+  <circle cx="360" cy="230" r="210" fill="#2563eb" fill-opacity="0.12" />
+  <circle cx="120" cy="80" r="140" fill="#3b82f6" fill-opacity="0.08" />
+  <circle cx="620" cy="380" r="160" fill="#fbbf24" fill-opacity="0.06" />
+
+  <!-- Ground Plane Shadow -->
+  <ellipse cx="360" cy="415" rx="290" ry="24" fill="#000000" fill-opacity="0.5" />
+
+  <!-- 1. MAIN DISPLAY: Sleek Modern Tablet with SAS Dashboard -->
+  <g filter="url(#shadow-main)" transform="translate(130, 42)">
+    <!-- Tablet Outer Bezel -->
+    <rect width="460" height="310" rx="18" fill="#090d16" stroke="#334155" stroke-width="2"/>
+    <rect x="5" y="5" width="450" height="300" rx="14" fill="#0f172a" />
+
+    <!-- Tablet Camera Notch -->
+    <circle cx="230" cy="11" r="2.5" fill="#475569" />
+
+    <!-- Tablet Screen Content -->
+    <g transform="translate(14, 20)">
+      <!-- Screen Background -->
+      <rect width="432" height="276" rx="8" fill="url(#screen-grad)" />
+
+      <!-- Top Dashboard Header Bar -->
+      <rect width="432" height="36" rx="8" fill="#0f172a" fill-opacity="0.9" />
+      <circle cx="16" cy="18" r="4.5" fill="#ef4444" />
+      <circle cx="28" cy="18" r="4.5" fill="#f59e0b" />
+      <circle cx="40" cy="18" r="4.5" fill="#10b981" />
+      
+      <!-- Brand on screen -->
+      <rect x="62" y="10" width="130" height="16" rx="4" fill="#1e293b" />
+      <text x="127" y="22" text-anchor="middle" fill="#93c5fd" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" letter-spacing="0.5">SMART AUDIT SYSTEM</text>
+      
+      <!-- User profile pill -->
+      <rect x="340" y="9" width="78" height="18" rx="9" fill="#1e3a8a" />
+      <text x="379" y="21" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700">AUDITOR ACTIVE</text>
+
+      <!-- Dashboard Body Grid -->
+      <!-- Left Sidebar Mini Navigation -->
+      <rect x="10" y="44" width="75" height="222" rx="6" fill="#090d16" fill-opacity="0.75" />
+      <rect x="16" y="52" width="63" height="16" rx="4" fill="#2563eb" />
+      <text x="47" y="63" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700">Overview</text>
+      
+      <rect x="16" y="73" width="63" height="14" rx="3" fill="#1e293b" />
+      <text x="47" y="83" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="600">9 Modul</text>
+      
+      <rect x="16" y="91" width="63" height="14" rx="3" fill="#1e293b" />
+      <text x="47" y="101" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="600">7 Worksheet</text>
+
+      <rect x="16" y="109" width="63" height="14" rx="3" fill="#1e293b" />
+      <text x="47" y="119" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="600">5 AI Tools</text>
+
+      <rect x="16" y="127" width="63" height="14" rx="3" fill="#1e293b" />
+      <text x="47" y="137" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="600">Simulasi</text>
+
+      <!-- Main Panel: Workflow & Execution Trackers -->
+      <g transform="translate(93, 44)">
+        <!-- Top Metric Bar -->
+        <g>
+          <rect x="0" y="0" width="104" height="48" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+          <text x="10" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">AUDIT PREPARATION</text>
+          <text x="10" y="34" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="900">100% READY</text>
+
+          <rect x="111" y="0" width="108" height="48" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+          <text x="121" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">PLOR EVIDENCE FORM</text>
+          <text x="121" y="34" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="900">STANDARDIZED</text>
+
+          <rect x="226" y="0" width="102" height="48" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+          <text x="236" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5" font-weight="600">AI PROMPT GENERATOR</text>
+          <text x="236" y="34" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="900">5 FRAMEWORKS</text>
+        </g>
+
+        <!-- Big Process Flow Visual on Tablet -->
+        <g transform="translate(0, 56)">
+          <rect width="328" height="106" rx="6" fill="#0f172a" stroke="#1e3a8a" stroke-width="1"/>
+          
+          <text x="12" y="18" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="9" font-weight="800">ISO 9001:2015 &amp; ISO 19011 AUDIT CYCLE</text>
+          <text x="248" y="18" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="8" font-weight="700">SISTEM PRAKTIS</text>
+
+          <!-- 5 Steps visualization inside screen -->
+          <g transform="translate(10, 28)">
+            <!-- Step 1 -->
+            <rect x="0" y="0" width="56" height="52" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
+            <text x="28" y="16" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="900">01</text>
+            <text x="28" y="28" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="7" font-weight="700">Persiapan</text>
+            <text x="28" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="6">Jadwal &amp; Scope</text>
+
+            <!-- Arrow 1 -->
+            <path d="M59 26 L65 26" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Step 2 -->
+            <rect x="68" y="0" width="56" height="52" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="0.8"/>
+            <text x="96" y="16" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="9" font-weight="900">02</text>
+            <text x="96" y="28" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="7" font-weight="700">Checklist</text>
+            <text x="96" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="6">Daftar Tanya</text>
+
+            <!-- Arrow 2 -->
+            <path d="M127 26 L133 26" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Step 3 -->
+            <rect x="136" y="0" width="56" height="52" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="0.8"/>
+            <text x="164" y="16" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="9" font-weight="900">03</text>
+            <text x="164" y="28" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="7" font-weight="700">Bukti/PLOR</text>
+            <text x="164" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="6">Objective Ev.</text>
+
+            <!-- Arrow 3 -->
+            <path d="M195 26 L201 26" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Step 4 -->
+            <rect x="204" y="0" width="56" height="52" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="0.8"/>
+            <text x="232" y="16" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="9" font-weight="900">04</text>
+            <text x="232" y="28" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="7" font-weight="700">CAPA</text>
+            <text x="232" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="6">Root Cause</text>
+
+            <!-- Arrow 4 -->
+            <path d="M263 26 L269 26" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Step 5 -->
+            <rect x="272" y="0" width="52" height="52" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="0.8"/>
+            <text x="298" y="16" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="9" font-weight="900">05</text>
+            <text x="298" y="28" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="7" font-weight="700">Laporan</text>
+            <text x="298" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="6">Manajemen</text>
+          </g>
+
+          <rect x="10" y="88" width="308" height="10" rx="3" fill="#1e293b" />
+          <rect x="10" y="88" width="220" height="10" rx="3" fill="url(#gold-accent)" />
+        </g>
+
+        <!-- Bottom status pill -->
+        <g transform="translate(0, 170)">
+          <rect width="328" height="48" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+          <text x="12" y="22" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9" font-weight="700">Status Akses: Aktif Seumur Hidup (Lifetime)</text>
+          <text x="12" y="38" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8">Format Excel (.xlsx) &amp; Word (.docx) Siap Edit • Panduan E-Course Lengkap</text>
+        </g>
+      </g>
+
+      <!-- Glass Sheen Glare across tablet screen -->
+      <polygon points="0,0 220,0 60,276 0,276" fill="url(#glass-sheen)" />
+    </g>
+  </g>
+
+  <!-- 2. LEFT FLOATING PRODUCT CARD: 7 Workbooks & Form Siap Pakai -->
+  <g filter="url(#shadow-card)" transform="translate(24, 180) rotate(-6)">
+    <rect width="180" height="200" rx="12" fill="#0f172a" stroke="#3b82f6" stroke-width="1.8"/>
+    <!-- Card Header Banner -->
+    <rect width="180" height="42" rx="12" fill="#1d4ed8" />
+    <rect x="0" y="28" width="180" height="14" fill="#1d4ed8" />
+    <text x="90" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.4">7 WORKSHEET AUDIT</text>
+    
+    <!-- Checklist items inside floating card -->
+    <g transform="translate(12, 54)">
+      <circle cx="6" cy="10" r="4" fill="#10b981"/>
+      <text x="16" y="13" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700">Checklist Klausul ISO</text>
+
+      <circle cx="6" cy="30" r="4" fill="#10b981"/>
+      <text x="16" y="33" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700">Form Evidence &amp; PLOR</text>
+
+      <circle cx="6" cy="50" r="4" fill="#10b981"/>
+      <text x="16" y="53" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700">Matriks CAPA &amp; RCA</text>
+
+      <circle cx="6" cy="70" r="4" fill="#10b981"/>
+      <text x="16" y="73" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700">Format Laporan Resmi</text>
+
+      <rect x="0" y="92" width="156" height="38" rx="6" fill="#1e293b" />
+      <text x="78" y="107" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="8" font-weight="800">FORMAT EXCEL &amp; WORD</text>
+      <text x="78" y="121" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7.5">Langsung Siap Diedit</text>
+    </g>
+  </g>
+
+  <!-- 3. RIGHT FLOATING PRODUCT CARD: 5 AI Tools & Simulasi -->
+  <g filter="url(#shadow-card)" transform="translate(520, 160) rotate(5)">
+    <rect width="180" height="210" rx="12" fill="#0f172a" stroke="#f59e0b" stroke-width="1.8"/>
+    <!-- Card Header Banner -->
+    <rect width="180" height="42" rx="12" fill="url(#gold-accent)" />
+    <rect x="0" y="28" width="180" height="14" fill="url(#gold-accent)" />
+    <text x="90" y="25" text-anchor="middle" fill="#000000" font-family="system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.4">5 AI TOOLS &amp; SIMULASI</text>
+
+    <!-- Content items -->
+    <g transform="translate(12, 54)">
+      <rect x="0" y="0" width="156" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+      <text x="8" y="15" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="8" font-weight="700">⚡ AI Draf Checklist Audit</text>
+
+      <rect x="0" y="28" width="156" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+      <text x="8" y="43" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="8" font-weight="700">⚡ AI Pertanyaan Wawancara</text>
+
+      <rect x="0" y="56" width="156" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+      <text x="8" y="71" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="8" font-weight="700">⚡ AI Temuan PLOR &amp; CAPA</text>
+
+      <rect x="0" y="84" width="156" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+      <text x="8" y="99" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="8" font-weight="700">⚡ Evaluasi &amp; Studi Kasus</text>
+
+      <!-- Bottom badge -->
+      <rect x="0" y="116" width="156" height="28" rx="6" fill="#1e3a8a" />
+      <text x="78" y="133" text-anchor="middle" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="8.5" font-weight="800">PRAKTIK NYATA LAPANGAN</text>
+    </g>
+  </g>
+
+  <!-- 4. FLOATING VALUE BADGE: Price & Lifetime Deal -->
+  <g filter="url(#glow-badge)" transform="translate(230, 360)">
+    <rect width="260" height="52" rx="26" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="6" y="6" width="40" height="40" rx="20" fill="url(#gold-accent)"/>
+    <text x="26" y="31" text-anchor="middle" fill="#000000" font-family="system-ui, sans-serif" font-size="16" font-weight="900">★</text>
+    
+    <text x="56" y="25" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="900">PAKET LENGKAP AUDITOR</text>
+    <text x="56" y="41" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="900">Rp99.000 <tspan fill="#94a3b8" font-size="9" font-weight="600">• Sekali Bayar</tspan></text>
+  </g>
+</svg>
