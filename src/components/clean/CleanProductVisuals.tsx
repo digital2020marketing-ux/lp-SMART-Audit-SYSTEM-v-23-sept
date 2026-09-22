@@ -30,19 +30,21 @@ export const CleanProductVisuals: React.FC = () => {
                 {item.desc}
               </p>
               <div className="rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs bg-slate-50">
-                <picture>
-                  <source media="(max-width: 480px)" srcSet="/images/gambar-dashbord-SAS-mobile.webp" type="image/webp" />
-                  <source srcSet={item.src} type="image/webp" />
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    width={600}
-                    height={380}
-                    className="w-full h-auto object-cover block"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width={600}
+                  height={380}
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg') {
+                      target.src = 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg';
+                    }
+                  }}
+                />
               </div>
             </div>
           ))}

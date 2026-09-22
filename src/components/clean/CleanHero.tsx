@@ -50,26 +50,34 @@ export const CleanHero: React.FC = () => {
 
         {/* Hero Product Mockup */}
         <div className="w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-md bg-slate-50">
-          <picture>
-            <source media="(max-width: 480px)" srcSet="/images/hero-mockup-sas-mobile.webp" type="image/webp" />
-            <source srcSet="/images/hero-mockup-sas.webp" type="image/webp" />
-            <img
-              src="/images/hero-mockup-sas.webp"
-              alt="Mockup SMART AUDIT SYSTEM — 9 Modul, 7 Worksheet, 5 AI Tools"
-              width={720}
-              height={460}
-              className="w-full h-auto object-cover block"
-              loading="eager"
-              fetchPriority="high"
-              decoding="sync"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                if (target.src !== window.location.origin + '/images/hero-mockup-bundle.svg') {
-                  target.src = '/images/hero-mockup-bundle.svg';
-                }
-              }}
-            />
-          </picture>
+          <img
+            src="/images/hero-mockup-sas.webp"
+            alt="Mockup SMART AUDIT SYSTEM — 9 Modul, 7 Worksheet, 5 AI Tools"
+            width={720}
+            height={460}
+            className="w-full h-auto object-cover block"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            onError={(e) => {
+              const target = e.currentTarget;
+              const stage = parseInt(target.dataset.stage || '0', 10);
+              
+              if (stage === 0) {
+                target.dataset.stage = '1';
+                // Fallback stage 1: direct remote URL (ImgBB)
+                target.src = 'https://i.ibb.co.com/xqtkxhYg/Chat-GPT-Image-Sep-22-2026-10-04-25-PM.png';
+              } else if (stage === 1) {
+                target.dataset.stage = '2';
+                // Fallback stage 2: smartbook.id verified CDN
+                target.src = 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg';
+              } else if (stage === 2) {
+                target.dataset.stage = '3';
+                // Fallback stage 3: SVG bundle
+                target.src = '/images/hero-mockup-bundle.svg';
+              }
+            }}
+          />
         </div>
       </div>
     </section>

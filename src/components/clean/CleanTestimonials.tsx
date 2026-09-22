@@ -111,20 +111,17 @@ export const CleanTestimonials: React.FC = () => {
 
               {/* Tangkapan Layar Asli */}
               <div className="rounded-xl overflow-hidden border border-slate-200 bg-slate-900/5 p-1.5 shadow-inner">
-                <picture>
-                  <source srcSet={item.imageWebp} type="image/webp" />
-                  <img
-                    src={item.imageWebp}
-                    onError={(e) => handleImageFallback(e, item.imagePng, item.remoteUrl)}
-                    referrerPolicy="no-referrer"
-                    alt={item.alt}
-                    width={500}
-                    height={380}
-                    className="w-full h-auto rounded-lg block bg-white mx-auto object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <img
+                  src={item.imageWebp}
+                  onError={(e) => handleImageFallback(e, item.imagePng, item.remoteUrl)}
+                  referrerPolicy="no-referrer"
+                  alt={item.alt}
+                  width={500}
+                  height={380}
+                  className="w-full h-auto rounded-lg block bg-white mx-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           ))}
