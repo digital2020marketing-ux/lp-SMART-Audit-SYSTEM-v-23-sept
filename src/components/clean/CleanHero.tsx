@@ -13,17 +13,17 @@ export const CleanHero: React.FC = () => {
 
         {/* Main Title (30-34px) */}
         <h1 className="text-[30px] sm:text-[34px] font-black text-slate-900 leading-[1.15] tracking-tight mb-3">
-          Panduan Pembelajaran Audit Internal Lengkap
+          Panduan Lengkap Audit Internal ISO 9001 &amp; 19011
         </h1>
 
         {/* Subtitle (18-20px) */}
-        <p className="text-[18px] sm:text-[19px] text-slate-700 font-semibold leading-snug mb-3 max-w-[440px]">
-          Khusus untuk auditor pemula yang ingin belajar audit internal ISO 9001 &amp; ISO 19011 secara lebih mudah, terarah, dan praktis.
+        <p className="text-[17.5px] sm:text-[19px] text-slate-800 font-bold leading-snug mb-3 max-w-[440px]">
+          Siap Jalankan Audit Tanpa Bingung — Dilengkapi Checklist, Template PLOR &amp; CAPA Siap Pakai!
         </p>
 
         {/* Kalimat yang Memperjelas Hasil */}
-        <p className="text-[16px] text-slate-800 font-medium leading-relaxed mb-4 max-w-[440px]">
-          Pelajari proses audit dari persiapan, pemeriksaan evidence checklist ISO 9001, penulisan temuan PLOR, hingga penyusunan CAPA dan laporan audit.
+        <p className="text-[15.5px] text-slate-600 font-medium leading-relaxed mb-4 max-w-[440px]">
+          Solusi praktis untuk auditor pemula &amp; tim mutu: mulai dari persiapan audit, verifikasi evidence klausul ISO 9001, hingga menyusun laporan audit yang diakui manajemen.
         </p>
 
         {/* Core Product Summary */}
@@ -33,19 +33,27 @@ export const CleanHero: React.FC = () => {
           </p>
         </div>
 
-        {/* Price Box */}
-        <div className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 mb-4 text-center">
+        {/* Price & Offer Box */}
+        <div className="w-full bg-slate-50 border border-slate-200/90 rounded-2xl p-4 mb-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <span className="text-[13px] text-slate-500 line-through font-bold">Rp299.000</span>
+            <span className="text-[11px] font-black uppercase tracking-wider text-red-700 bg-red-100 px-2 py-0.5 rounded-full">Hemat 67%</span>
+          </div>
           <div className="text-[38px] sm:text-[42px] font-black text-red-600 tracking-tight leading-none mb-1">
             Rp99.000
           </div>
-          <p className="text-[16px] text-slate-600 font-medium">
-            Sekali Bayar • Akses Seumur Hidup
+          <p className="text-[15px] sm:text-[16px] text-slate-700 font-bold">
+            Sekali Bayar • Akses Seumur Hidup • Garansi 7 Hari
           </p>
         </div>
 
         {/* Big Yellow CTA Button */}
         <div className="w-full mb-6">
-          <CtaButton position="hero" label="DAPATKAN SEKARANG — Rp99.000" />
+          <CtaButton 
+            position="hero" 
+            label="DAPATKAN SEKARANG — Rp99.000" 
+            sublabel="Akses Instan Otomatis • Garansi 7 Hari Uang Kembali"
+          />
         </div>
 
         {/* Hero Product Mockup */}

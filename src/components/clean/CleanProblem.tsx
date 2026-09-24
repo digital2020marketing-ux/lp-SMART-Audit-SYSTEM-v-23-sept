@@ -1,4 +1,5 @@
 import React from 'react';
+import { CtaButton } from './CtaButton';
 
 export const CleanProblem: React.FC = () => {
   return (
@@ -40,6 +41,15 @@ export const CleanProblem: React.FC = () => {
               Sulit merumuskan temuan audit secara objektif tanpa terkesan mencari kesalahan, serta bingung mengarahkan tindakan korektif.
             </p>
           </div>
+        </div>
+
+        {/* CTA Bridge */}
+        <div className="mt-7 pt-5 border-t border-slate-100">
+          <CtaButton
+            position="problem_section"
+            label="SOLUSINYA: MILIKI SMART AUDIT SYSTEM"
+            sublabel="Akses Panduan & Template Siap Pakai — Rp99.000"
+          />
         </div>
       </div>
     </section>

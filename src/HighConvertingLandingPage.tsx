@@ -9,10 +9,11 @@ import { CleanTestimonials } from './components/clean/CleanTestimonials';
 import { CleanOffer } from './components/clean/CleanOffer';
 import { CleanFaq } from './components/clean/CleanFaq';
 import { CleanFinalCta } from './components/clean/CleanFinalCta';
+import { StickyMobileBar } from './components/clean/StickyMobileBar';
 
 export const HighConvertingLandingPage: React.FC = () => {
   return (
-    <div className="w-full min-h-screen bg-slate-100/70 sm:py-6 overflow-x-hidden">
+    <div className="w-full min-h-screen bg-slate-100/70 sm:py-6 overflow-x-hidden pb-16 sm:pb-0">
       {/* Single column mobile-first container */}
       <main className="w-full max-w-full sm:max-w-[480px] md:max-w-[500px] min-h-screen bg-white text-slate-900 flex flex-col mx-auto antialiased relative shadow-xl overflow-x-hidden sm:rounded-3xl sm:border sm:border-slate-200/80">
         {/* Top Product Header Bar */}
@@ -52,6 +53,9 @@ export const HighConvertingLandingPage: React.FC = () => {
         {/* 10. CTA penutup */}
         <CleanFinalCta />
       </main>
+
+      {/* Floating Sticky Buy Button for Mobile Users */}
+      <StickyMobileBar />
     </div>
   );
 };

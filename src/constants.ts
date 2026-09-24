@@ -206,8 +206,25 @@ export function trackCheckoutClick(position: string = 'general', label?: string)
   const eventId = `chk_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
   
   try {
-    // 1. Browser-side Meta Pixel InitiateCheckout
+    // 1. Browser-side Meta Pixel AddToCart & InitiateCheckout
     if (typeof (window as any).fbq === 'function') {
+      // AddToCart (Standar event Meta Ads untuk penambahan ke keranjang)
+      (window as any).fbq(
+        'track',
+        'AddToCart',
+        {
+          content_name: 'SMART Audit SYSTEM',
+          content_ids: ['smart-audit-system'],
+          content_type: 'product',
+          position: position,
+          label: label || 'Checkout Direct Link',
+          value: CHECKOUT_PRICE,
+          currency: 'IDR',
+        },
+        { eventID: `${eventId}_atc` }
+      );
+
+      // InitiateCheckout
       (window as any).fbq(
         'track',
         'InitiateCheckout',
@@ -253,6 +270,16 @@ export function trackCheckoutClick(position: string = 'general', label?: string)
     }
 
     // 2. Server-side Meta Conversions API (CAPI)
+    sendServerEvent('AddToCart', `${eventId}_atc`, {
+      content_name: 'SMART Audit SYSTEM Direct Checkout',
+      content_ids: ['smart-audit-system'],
+      content_type: 'product',
+      position,
+      label: label || 'Checkout Direct Link',
+      value: CHECKOUT_PRICE,
+      currency: 'IDR',
+    });
+
     sendServerEvent('InitiateCheckout', eventId, {
       content_name: 'SMART Audit SYSTEM Direct Checkout',
       content_ids: ['smart-audit-system'],
