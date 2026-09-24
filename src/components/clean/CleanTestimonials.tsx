@@ -1,9 +1,11 @@
 import React from 'react';
 import { handleImageFallback, SMARTBOOK_IMAGES } from '../../imageConstants';
+import { CtaButton } from './CtaButton';
 
 interface TestiItem {
   id: number;
   highlight: string;
+  benefitBadge: string;
   imageWebp: string;
   imagePng: string;
   remoteUrl?: string;
@@ -13,7 +15,8 @@ interface TestiItem {
 const TOP_3_TESTIMONIALS: TestiItem[] = [
   {
     id: 1,
-    highlight: 'Mudah dipraktikkan langsung oleh pemula',
+    benefitBadge: 'Benefit 1: Mudah Dipraktikkan',
+    highlight: 'Panduan sangat aplikatif & mudah dipraktikkan langsung oleh pemula',
     imageWebp: '/images/testi1.webp',
     imagePng: '/images/testi1.png',
     remoteUrl: SMARTBOOK_IMAGES.testi1?.url,
@@ -21,7 +24,8 @@ const TOP_3_TESTIMONIALS: TestiItem[] = [
   },
   {
     id: 2,
-    highlight: 'Checklist & Worksheet PLOR sangat membantu di lapangan',
+    benefitBadge: 'Benefit 2: Checklist & PLOR Membantu',
+    highlight: 'Checklist pertanyaan & Worksheet PLOR sangat membantu saat audit',
     imageWebp: '/images/testi2.webp',
     imagePng: '/images/testi2.png',
     remoteUrl: SMARTBOOK_IMAGES.testi2?.url,
@@ -29,7 +33,8 @@ const TOP_3_TESTIMONIALS: TestiItem[] = [
   },
   {
     id: 3,
-    highlight: 'Menghemat waktu persiapan audit secara signifikan',
+    benefitBadge: 'Benefit 3: Menghemat Waktu',
+    highlight: 'Menghemat waktu persiapan audit hingga berhari-hari kerja',
     imageWebp: '/images/testi3.webp',
     imagePng: '/images/testi3.png',
     remoteUrl: SMARTBOOK_IMAGES.testi3?.url,
@@ -39,30 +44,32 @@ const TOP_3_TESTIMONIALS: TestiItem[] = [
 
 export const CleanTestimonials: React.FC = () => {
   return (
-    <section className="w-full bg-slate-50 py-10 sm:py-12 px-5 border-b border-slate-200/90">
+    <section className="w-full bg-slate-50 py-8 sm:py-10 px-4 sm:px-5 border-b border-slate-200/90">
       <div className="w-full text-left">
         {/* Eyebrow */}
-        <span className="text-[12px] font-extrabold uppercase tracking-wider text-emerald-800 block mb-1.5">
+        <span className="text-[11.5px] font-extrabold uppercase tracking-wider text-emerald-800 block mb-1">
           BUKTI NYATA PENGGUNA
         </span>
 
         {/* Section Heading */}
-        <h2 className="text-[25px] sm:text-[29px] font-black text-slate-900 leading-tight mb-6">
+        <h2 className="text-[24px] sm:text-[28px] font-black text-slate-950 leading-tight mb-5">
           Dari Bingung Mulai Audit, Jadi Punya Alur yang Lebih Jelas
         </h2>
 
         {/* 3 Strongest Testimonials Screenshot Stack */}
-        <div className="space-y-6 mb-5">
+        <div className="space-y-5 mb-5">
           {TOP_3_TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs"
+              className="p-3 sm:p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs"
             >
-              <div className="flex items-center gap-2 mb-2.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span className="text-[13px] font-black text-slate-800">
-                  {item.highlight}
+              <div className="mb-2">
+                <span className="text-[10px] sm:text-[10.5px] font-extrabold tracking-wider uppercase px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-900 inline-block mb-1">
+                  {item.benefitBadge}
                 </span>
+                <p className="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">
+                  {item.highlight}
+                </p>
               </div>
 
               {/* Tangkapan Layar Asli */}
@@ -84,9 +91,18 @@ export const CleanTestimonials: React.FC = () => {
         </div>
 
         {/* Natural Disclaimer */}
-        <p className="text-[13px] text-slate-500 italic text-center leading-normal">
+        <p className="text-[12px] sm:text-[12.5px] text-slate-500 italic text-center leading-normal mb-5">
           Pengalaman setiap pengguna dapat berbeda sesuai latar belakang dan penerapannya.
         </p>
+
+        {/* CTA Strategis: Setelah Testimoni */}
+        <div className="w-full">
+          <CtaButton
+            position="after_testimonials"
+            label="GABUNG DENGAN RATUSAN AUDITOR LAINNYA →"
+            sublabel="Akses Langsung — Rp99.000 Sekali Bayar"
+          />
+        </div>
       </div>
     </section>
   );

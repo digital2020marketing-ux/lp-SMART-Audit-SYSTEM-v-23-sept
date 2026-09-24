@@ -1,66 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+interface FaqItem {
+  q: string;
+  a: string;
+}
 
 export const CleanFaq: React.FC = () => {
-  const faqs = [
+  const [openIdx, setOpenIdx] = useState<number | null>(0); // Pertanyaan pertama terbuka default
+
+  const toggleFaq = (idx: number) => {
+    setOpenIdx(openIdx === idx ? null : idx);
+  };
+
+  const faqs: FaqItem[] = [
     {
       q: 'Apakah SMART AUDIT SYSTEM merupakan sertifikasi auditor?',
-      a: 'Tidak. SMART AUDIT SYSTEM adalah panduan dan instrumen pembelajaran/praktik audit internal. Produk ini bukan program sertifikasi auditor.',
+      a: 'Bukan. SMART AUDIT SYSTEM adalah sistem kerja, panduan terapan, dan instrumen operasional untuk membantu auditor internal menjalankan audit di lapangan. Ini bukan sertifikasi bergelar.',
     },
     {
-      q: 'Apakah template bisa langsung digunakan tanpa penyesuaian?',
-      a: 'Template disediakan dalam format yang dapat diedit sehingga dapat disesuaikan dengan ruang lingkup, proses, prosedur, dan kebutuhan organisasi masing-masing.',
+      q: 'Apakah template bisa langsung diedit dan disesuaikan?',
+      a: 'Ya, seluruh template disediakan dalam format Word (.docx) dan Excel (.xlsx) yang dapat langsung diedit sesuai proses bisnis dan prosedur perusahaan Anda.',
     },
     {
-      q: 'Apakah materi ini cocok untuk pemula yang belum pernah mengaudit?',
-      a: 'Ya, sangat cocok. Panduan disusun sistematis dari persiapan, cara wawancara, verifikasi bukti, hingga penulisan laporan dengan bahasa praktis tanpa teori berbelit-belit.',
+      q: 'Apakah materi ini cocok untuk pemula yang baru pertama kali mengaudit?',
+      a: 'Sangat cocok. Panduan ini dirancang dari tahap awal persiapan, teknik interview, cara memeriksa evidence, hingga penulisan temuan PLOR dan laporan resmi dengan bahasa terapan yang mudah dipahami.',
     },
     {
       q: 'Apakah ada biaya langganan bulanan?',
-      a: 'Tidak. Pembayaran hanya satu kali (Rp99.000) dan Anda mendapatkan akses seumur hidup tanpa tagihan berulang.',
+      a: 'Tidak ada. Pembayaran Rp99.000 dilakukan satu kali saja untuk akses seumur hidup (lifetime access) tanpa biaya tersembunyi.',
     },
     {
-      q: 'Format file apa saja yang disediakan?',
-      a: 'Worksheet dan instrumen audit tersedia dalam format Microsoft Word (.docx) dan Excel (.xlsx) yang siap diedit sesuai kebutuhan organisasi.',
+      q: 'Apakah AI Tools memerlukan langganan AI berbayar?',
+      a: 'Tidak. Framework prompt AI yang kami sediakan dapat langsung digunakan di akun ChatGPT versi gratis tanpa perlu upgrade ke langganan berbayar.',
     },
     {
-      q: 'Apakah AI Tools memerlukan aplikasi berbayar?',
-      a: 'AI Tools digunakan sebagai panduan atau framework prompt penyusunan draf. Pengguna dapat menjalankannya di platform AI gratis (seperti ChatGPT versi gratis). Biaya platform pihak ketiga jika ingin berlangganan tidak termasuk dalam paket ini.',
-    },
-    {
-      q: 'Bagaimana cara mengakses materi setelah pembayaran?',
-      a: 'Setelah pembayaran diverifikasi secara otomatis, link akses instan ke seluruh materi, modul, worksheet, dan tools langsung dikirimkan ke email dan nomor WhatsApp yang dimasukkan saat checkout.',
+      q: 'Bagaimana cara mengakses materinya setelah pembayaran?',
+      a: 'Akses instan langsung dikirimkan ke email dan nomor WhatsApp Anda segera setelah konfirmasi pembayaran berhasil.',
     },
   ];
 
   return (
-    <section className="w-full bg-white py-10 sm:py-12 px-5 border-b border-slate-100">
+    <section className="w-full bg-white py-8 sm:py-10 px-4 sm:px-5 border-b border-slate-100">
       <div className="w-full text-left">
         {/* Eyebrow */}
-        <span className="text-[12px] font-extrabold uppercase tracking-wider text-slate-500 block mb-1.5">
+        <span className="text-[11.5px] font-extrabold uppercase tracking-wider text-slate-500 block mb-1">
           FREQUENTLY ASKED QUESTIONS
         </span>
 
         {/* Section Heading */}
-        <h2 className="text-[25px] sm:text-[29px] font-black text-slate-900 leading-tight mb-6">
+        <h2 className="text-[24px] sm:text-[28px] font-black text-slate-950 leading-tight mb-5">
           Pertanyaan yang Sering Diajukan
         </h2>
 
-        {/* FAQ Items - Clean Open Cards */}
-        <div className="space-y-3.5">
-          {faqs.map((item, idx) => (
-            <div
-              key={idx}
-              className="rounded-xl border border-slate-200/90 bg-slate-50/80 p-4"
-            >
-              <h3 className="text-slate-900 font-bold text-[16px] leading-snug mb-2 flex items-start gap-2">
-                <span className="text-blue-900 font-black shrink-0">Q:</span>
-                <span>{item.q}</span>
-              </h3>
-              <p className="text-[14.5px] text-slate-700 leading-relaxed font-medium pl-6">
-                {item.a}
-              </p>
-            </div>
-          ))}
+        {/* Accordion List — User Klik Pertanyaan → Jawaban Terbuka */}
+        <div className="space-y-2.5">
+          {faqs.map((item, idx) => {
+            const isOpen = openIdx === idx;
+            return (
+              <div
+                key={idx}
+                className="rounded-xl border border-slate-200/90 bg-slate-50 overflow-hidden transition-colors"
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full p-3.5 sm:p-4 text-left flex items-center justify-between gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-[14.5px] sm:text-[15.5px] font-bold text-slate-900 leading-snug">
+                    {item.q}
+                  </span>
+                  <span
+                    className={`w-6 h-6 rounded-full bg-slate-200/80 text-slate-700 flex items-center justify-center text-[16px] font-black shrink-0 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 bg-blue-100 text-blue-900' : ''
+                    }`}
+                  >
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="px-3.5 pb-3.5 sm:px-4 sm:pb-4 text-[13.5px] sm:text-[14px] text-slate-600 font-medium leading-relaxed border-t border-slate-200/60 pt-2.5">
+                    {item.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

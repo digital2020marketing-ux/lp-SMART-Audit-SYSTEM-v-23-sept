@@ -6,8 +6,8 @@ export const StickyMobileBar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Muncul setelah user scroll melewati 380px (di bawah hero awal)
-      if (window.scrollY > 380) {
+      // Muncul setelah user scroll melewati 350px (melewati fold pertama)
+      if (window.scrollY > 350) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -19,32 +19,32 @@ export const StickyMobileBar: React.FC = () => {
   }, []);
 
   const handleClick = () => {
-    trackCheckoutClick('sticky_mobile_bottom', 'DAPATKAN SEKARANG — Rp99.000');
+    trackCheckoutClick('sticky_mobile_bottom', 'Rp99.000 | Dapatkan Sekarang');
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-2.5 sm:p-3 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-bottom-2">
-      <div className="max-w-[480px] sm:max-w-[500px] mx-auto flex items-center justify-between gap-3">
-        {/* Info Harga Ringkas */}
-        <div className="flex flex-col text-left pl-1">
-          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider leading-none">
-            Akses Lengkap
-          </span>
-          <span className="text-[19px] sm:text-[20px] font-black text-red-600 leading-tight">
+    <div className="fixed bottom-0 left-0 right-0 z-50 py-2 px-3 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-2xl transition-all duration-200">
+      <div className="max-w-[480px] sm:max-w-[500px] mx-auto flex items-center justify-between gap-2.5">
+        {/* Price & Label Ringkas */}
+        <div className="flex items-center gap-1.5 pl-1 shrink-0">
+          <span className="text-[17px] sm:text-[18px] font-black text-red-600 leading-none">
             Rp99.000
+          </span>
+          <span className="text-[11px] text-slate-400 line-through font-bold hidden xs:inline">
+            Rp299.000
           </span>
         </div>
 
-        {/* Tombol CTA Sticky Merah */}
+        {/* Tombol CTA Merah Kompak Tidak Mengganggu */}
         <a
           href={getCheckoutUrl()}
           onClick={handleClick}
-          className="flex-1 min-h-[48px] px-4 py-2.5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-[0.98] text-white font-black text-[15px] sm:text-[16px] rounded-xl flex items-center justify-center text-center shadow-md shadow-red-600/30 border border-red-500/90 tracking-tight leading-tight transition-transform"
+          className="flex-1 min-h-[42px] max-h-[46px] px-3 py-2 bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-[0.98] text-white font-black text-[13.5px] sm:text-[14.5px] rounded-xl flex items-center justify-center text-center shadow-md shadow-red-600/30 border border-red-500/90 tracking-tight transition-transform"
         >
-          <span>BELI SEKARANG</span>
-          <span className="ml-1 text-[17px]">→</span>
+          <span>DAPATKAN SEKARANG</span>
+          <span className="ml-1 text-[15px]">→</span>
         </a>
       </div>
     </div>
