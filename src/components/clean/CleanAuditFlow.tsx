@@ -1,62 +1,79 @@
 import React from 'react';
 
 export const CleanAuditFlow: React.FC = () => {
-  const steps = [
+  const benefits = [
     {
-      num: '1',
-      title: 'Persiapan & Rencana Audit',
-      desc: 'Menentukan jadwal, ruang lingkup, kriteria standar, dan dokumen acuan yang akan diaudit.',
+      num: '01',
+      title: 'Lebih Jelas Memulai Audit',
+      desc: 'Punya alur untuk menentukan ruang lingkup, jadwal, kriteria, dan dokumen yang perlu dipersiapkan.',
     },
     {
-      num: '2',
-      title: 'Penyusunan Checklist & Pertanyaan',
-      desc: 'Menyiapkan daftar periksa klausul dan susunan pertanyaan wawancara agar fokus dan terarah.',
+      num: '02',
+      title: 'Tidak Bingung Menyiapkan Pertanyaan',
+      desc: 'Gunakan checklist dan panduan pertanyaan untuk membantu proses wawancara lebih terarah.',
     },
     {
-      num: '3',
-      title: 'Pengumpulan Bukti & Temuan PLOR',
-      desc: 'Mengumpulkan bukti objektif dan mencatat temuan dengan format Problem, Location, Objective Evidence, Reference.',
+      num: '03',
+      title: 'Lebih Terarah Saat Mengecek Evidence',
+      desc: 'Pahami apa yang perlu diverifikasi dan bagaimana menghubungkannya dengan kriteria audit.',
     },
     {
-      num: '4',
-      title: 'Analisis Root Cause & CAPA',
-      desc: 'Mengidentifikasi akar penyebab masalah dan menyusun koreksi serta tindakan korektif yang sesuai.',
+      num: '04',
+      title: 'Lebih Mudah Menyusun Temuan & CAPA',
+      desc: 'Gunakan format PLOR, root cause, dan CAPA agar dokumentasi audit lebih sistematis.',
     },
     {
-      num: '5',
-      title: 'Penerbitan Laporan Audit',
-      desc: 'Merangkum hasil temuan dan rekomendasi ke dalam laporan resmi yang rapi untuk manajemen.',
+      num: '05',
+      title: 'Lebih Cepat Menyusun Laporan',
+      desc: 'Tidak perlu terus-menerus membuat format kerja dari halaman kosong.',
     },
   ];
 
   return (
-    <section className="w-full bg-white py-10 sm:py-12 px-5 border-b border-slate-100">
+    <section className="w-full bg-slate-50 py-10 sm:py-12 px-5 border-b border-slate-200/90">
       <div className="w-full text-left">
-        {/* Section Heading */}
-        <h2 className="text-[28px] sm:text-[32px] font-black text-slate-900 leading-tight mb-2">
-          Alur Pembelajaran Audit
-        </h2>
-        <p className="text-[16px] sm:text-[17px] text-slate-600 font-medium leading-normal mb-7">
-          Alur kerja bertahap yang memandu Anda dari awal hingga menghasilkan laporan audit yang rapi.
-        </p>
+        {/* Eyebrow */}
+        <span className="text-[12px] font-extrabold uppercase tracking-wider text-emerald-800 block mb-1.5">
+          MANFAAT UTAMA
+        </span>
 
-        {/* 5 Linear Steps */}
-        <div className="space-y-5">
-          {steps.map((step) => (
-            <div key={step.num} className="flex items-start gap-3.5">
-              <div className="w-8 h-8 rounded-full bg-blue-900 text-white font-black text-[15px] flex items-center justify-center shrink-0 mt-0.5">
-                {step.num}
-              </div>
+        {/* Section Heading */}
+        <h2 className="text-[25px] sm:text-[29px] font-black text-slate-900 leading-tight mb-6">
+          Yang Akan Kamu Dapatkan dari SMART AUDIT SYSTEM
+        </h2>
+
+        {/* 5 Numbered Benefits */}
+        <div className="space-y-4 mb-6">
+          {benefits.map((item) => (
+            <div
+              key={item.num}
+              className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-start gap-3.5"
+            >
+              <span className="text-[18px] sm:text-[20px] font-black text-blue-900 leading-none shrink-0 pt-0.5 font-mono">
+                {item.num}
+              </span>
               <div>
-                <h3 className="text-[17px] sm:text-[18px] font-bold text-slate-900 mb-0.5 leading-snug">
-                  {step.title}
+                <h3 className="text-[16px] sm:text-[17px] font-black text-slate-900 leading-snug mb-1">
+                  {item.title}
                 </h3>
-                <p className="text-[16px] text-slate-700 leading-relaxed">
-                  {step.desc}
+                <p className="text-[14.5px] sm:text-[15px] text-slate-600 font-medium leading-relaxed">
+                  {item.desc}
                 </p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Core Transformation Box */}
+        <div className="p-4 sm:p-5 rounded-2xl bg-blue-950 text-white text-center">
+          <p className="text-[13px] font-bold uppercase tracking-wider text-blue-200 mb-1">
+            Intinya:
+          </p>
+          <div className="text-[16px] sm:text-[17px] font-medium leading-relaxed">
+            Dari <span className="text-red-300 font-bold">“Saya harus ngapain?”</span>
+            <br />
+            menjadi <span className="text-amber-300 font-black">“Saya tahu langkah berikutnya.”</span>
+          </div>
         </div>
       </div>
     </section>

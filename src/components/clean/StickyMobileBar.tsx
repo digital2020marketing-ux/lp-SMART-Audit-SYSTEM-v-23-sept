@@ -37,11 +37,11 @@ export const StickyMobileBar: React.FC = () => {
           </span>
         </div>
 
-        {/* Tombol CTA Sticky */}
+        {/* Tombol CTA Sticky Merah */}
         <a
           href={getCheckoutUrl()}
           onClick={handleClick}
-          className="flex-1 min-h-[48px] px-4 py-2.5 bg-amber-400 hover:bg-amber-500 active:scale-[0.98] text-slate-950 font-black text-[15px] sm:text-[16px] rounded-xl flex items-center justify-center text-center shadow-md border border-amber-500/80 tracking-tight leading-tight transition-transform"
+          className="flex-1 min-h-[48px] px-4 py-2.5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-[0.98] text-white font-black text-[15px] sm:text-[16px] rounded-xl flex items-center justify-center text-center shadow-md shadow-red-600/30 border border-red-500/90 tracking-tight leading-tight transition-transform"
         >
           <span>BELI SEKARANG</span>
           <span className="ml-1 text-[17px]">→</span>

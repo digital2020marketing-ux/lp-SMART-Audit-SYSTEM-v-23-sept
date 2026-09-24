@@ -1,12 +1,15 @@
 import React from 'react';
 import { CleanHero } from './components/clean/CleanHero';
 import { CleanProblem } from './components/clean/CleanProblem';
-import { CleanProductContents } from './components/clean/CleanProductContents';
-import { CleanAuditFlow } from './components/clean/CleanAuditFlow';
+import { CleanSolution } from './components/clean/CleanSolution';
 import { CleanProductVisuals } from './components/clean/CleanProductVisuals';
-import { CleanTargetAudience } from './components/clean/CleanTargetAudience';
+import { CleanAuditFlow } from './components/clean/CleanAuditFlow';
+import { CleanProductContents } from './components/clean/CleanProductContents';
 import { CleanTestimonials } from './components/clean/CleanTestimonials';
+import { CleanTargetAudience } from './components/clean/CleanTargetAudience';
 import { CleanOffer } from './components/clean/CleanOffer';
+import { CleanCostComparison } from './components/clean/CleanCostComparison';
+import { CleanGuarantee } from './components/clean/CleanGuarantee';
 import { CleanFaq } from './components/clean/CleanFaq';
 import { CleanFinalCta } from './components/clean/CleanFinalCta';
 import { StickyMobileBar } from './components/clean/StickyMobileBar';
@@ -18,39 +21,48 @@ export const HighConvertingLandingPage: React.FC = () => {
       <main className="w-full max-w-full sm:max-w-[480px] md:max-w-[500px] min-h-screen bg-white text-slate-900 flex flex-col mx-auto antialiased relative shadow-xl overflow-x-hidden sm:rounded-3xl sm:border sm:border-slate-200/80">
         {/* Top Product Header Bar */}
         <header className="w-full bg-slate-900 text-white py-2.5 px-4 text-center border-b border-slate-800 shrink-0">
-          <span className="text-[14px] sm:text-[15px] font-black tracking-wider uppercase block">
-            SMART AUDIT SYSTEM
+          <span className="text-[13px] sm:text-[14px] font-black tracking-wider uppercase block">
+            SMART AUDIT SYSTEM • ISO 9001 &amp; ISO 19011
           </span>
         </header>
 
-        {/* 1. Hero dan tombol pembelian */}
+        {/* SECTION 1 — HERO */}
         <CleanHero />
 
-        {/* 2. Masalah auditor pemula */}
+        {/* SECTION 2 — PROBLEM / AGITATE */}
         <CleanProblem />
 
-        {/* 3. Isi SMART AUDIT SYSTEM (4 kartu + tombol) */}
-        <CleanProductContents />
+        {/* SECTION 3 — BRIDGING */}
+        <CleanSolution />
 
-        {/* 4. Alur pembelajaran audit */}
-        <CleanAuditFlow />
-
-        {/* 5. Screenshot dashboard dan contoh worksheet (3 gambar asli + tombol) */}
+        {/* SECTION 4 — PROOF PRODUK */}
         <CleanProductVisuals />
 
-        {/* 6. Testimoni dan bukti nyata pengguna */}
+        {/* SECTION 5 — BENEFIT */}
+        <CleanAuditFlow />
+
+        {/* SECTION 6 — WHAT YOU GET */}
+        <CleanProductContents />
+
+        {/* SECTION 7 — SOCIAL PROOF */}
         <CleanTestimonials />
 
-        {/* 7. Target pengguna */}
+        {/* SECTION 8 — TARGET MARKET */}
         <CleanTargetAudience />
 
-        {/* 8. Harga dan garansi (Rp99.000 + garansi 7 hari + tombol) */}
+        {/* SECTION 9 — VALUE STACK */}
         <CleanOffer />
 
-        {/* 9. FAQ */}
+        {/* SECTION 10 — HANDLING OBJECTION */}
+        <CleanCostComparison />
+
+        {/* SECTION 11 — GUARANTEE */}
+        <CleanGuarantee />
+
+        {/* SECTION 12 — FAQ */}
         <CleanFaq />
 
-        {/* 10. CTA penutup */}
+        {/* SECTION 13 — FINAL CLOSE */}
         <CleanFinalCta />
       </main>
 

@@ -5,54 +5,72 @@ export const CleanHero: React.FC = () => {
   return (
     <section className="w-full bg-white pt-6 pb-8 px-5 border-b border-slate-100">
       <div className="w-full flex flex-col items-center text-center">
-        {/* ISO Standard Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-blue-50 border border-blue-200/90 text-blue-900 rounded-full text-[13px] sm:text-[14px] font-bold tracking-tight mb-3">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-blue-50 border border-blue-200/90 text-blue-900 rounded-full text-[12px] sm:text-[13px] font-extrabold tracking-wider uppercase mb-3">
           <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-          Standar ISO 9001 &amp; ISO 19011
+          AUDITOR INTERNAL ISO 9001
         </div>
 
-        {/* Main Title (30-34px) */}
-        <h1 className="text-[30px] sm:text-[34px] font-black text-slate-900 leading-[1.15] tracking-tight mb-3">
-          Panduan Lengkap Audit Internal ISO 9001 &amp; 19011
+        {/* Headline */}
+        <h1 className="text-[27px] sm:text-[32px] font-black text-slate-900 leading-[1.2] tracking-tight mb-3">
+          Sudah Ditunjuk Jadi Auditor Internal, Tapi Masih Bingung Harus Mulai Audit dari Mana?
         </h1>
 
-        {/* Subtitle (18-20px) */}
-        <p className="text-[17.5px] sm:text-[19px] text-slate-800 font-bold leading-snug mb-3 max-w-[440px]">
-          Siap Jalankan Audit Tanpa Bingung — Dilengkapi Checklist, Template PLOR &amp; CAPA Siap Pakai!
+        {/* Hook */}
+        <p className="text-[17px] sm:text-[18px] text-slate-800 font-bold leading-snug mb-3 max-w-[440px]">
+          Nggak cuma memahami klausul.
         </p>
 
-        {/* Kalimat yang Memperjelas Hasil */}
-        <p className="text-[15.5px] text-slate-600 font-medium leading-relaxed mb-4 max-w-[440px]">
-          Solusi praktis untuk auditor pemula &amp; tim mutu: mulai dari persiapan audit, verifikasi evidence klausul ISO 9001, hingga menyusun laporan audit yang diakui manajemen.
+        {/* Core Value Proposition */}
+        <p className="text-[15.5px] text-slate-700 font-medium leading-relaxed mb-3 max-w-[440px]">
+          <strong className="text-slate-900 font-bold">SMART AUDIT SYSTEM</strong> membantu kamu menjalankan audit internal langkah demi langkah — mulai dari menyusun checklist &amp; pertanyaan, mengecek evidence, menulis temuan PLOR, sampai menyusun CAPA dan laporan audit.
         </p>
 
-        {/* Core Product Summary */}
-        <div className="w-full py-2.5 px-3 bg-slate-50 border border-slate-200/90 rounded-xl mb-4">
-          <p className="text-[15px] font-bold text-slate-800 tracking-tight">
-            9 Modul • 7 Worksheet • 5 AI Tools • Simulasi Audit ISO 9001 &amp; 19011
-          </p>
+        {/* Reassurance */}
+        <p className="text-[14.5px] text-blue-950 font-bold bg-blue-50/70 border border-blue-100 py-1.5 px-3 rounded-lg mb-4">
+          Tanpa harus membuat semua instrumen audit dari nol.
+        </p>
+
+        {/* 4 Feature Checklist Points */}
+        <div className="w-full py-3 px-4 bg-slate-50 border border-slate-200/90 rounded-2xl mb-4 text-left space-y-1.5">
+          <div className="flex items-center gap-2 text-[14.5px] sm:text-[15px] font-bold text-slate-800">
+            <span className="text-emerald-600 font-black">✓</span>
+            <span>9 Modul Panduan Audit</span>
+          </div>
+          <div className="flex items-center gap-2 text-[14.5px] sm:text-[15px] font-bold text-slate-800">
+            <span className="text-emerald-600 font-black">✓</span>
+            <span>7 Worksheet Siap Edit</span>
+          </div>
+          <div className="flex items-center gap-2 text-[14.5px] sm:text-[15px] font-bold text-slate-800">
+            <span className="text-emerald-600 font-black">✓</span>
+            <span>5 AI Tools Audit</span>
+          </div>
+          <div className="flex items-center gap-2 text-[14.5px] sm:text-[15px] font-bold text-slate-800">
+            <span className="text-emerald-600 font-black">✓</span>
+            <span>Simulasi Audit ISO 9001 &amp; ISO 19011</span>
+          </div>
         </div>
 
         {/* Price & Offer Box */}
         <div className="w-full bg-slate-50 border border-slate-200/90 rounded-2xl p-4 mb-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-1">
-            <span className="text-[13px] text-slate-500 line-through font-bold">Rp299.000</span>
+            <span className="text-[14px] text-slate-400 line-through font-bold">Rp299.000</span>
             <span className="text-[11px] font-black uppercase tracking-wider text-red-700 bg-red-100 px-2 py-0.5 rounded-full">Hemat 67%</span>
           </div>
-          <div className="text-[38px] sm:text-[42px] font-black text-red-600 tracking-tight leading-none mb-1">
+          <div className="text-[40px] sm:text-[44px] font-black text-red-600 tracking-tight leading-none mb-1.5">
             Rp99.000
           </div>
-          <p className="text-[15px] sm:text-[16px] text-slate-700 font-bold">
+          <p className="text-[14px] sm:text-[15px] text-slate-700 font-bold">
             Sekali Bayar • Akses Seumur Hidup • Garansi 7 Hari
           </p>
         </div>
 
-        {/* Big Yellow CTA Button */}
-        <div className="w-full mb-6">
+        {/* CTA Button */}
+        <div className="w-full mb-5">
           <CtaButton 
             position="hero" 
-            label="DAPATKAN SEKARANG — Rp99.000" 
-            sublabel="Akses Instan Otomatis • Garansi 7 Hari Uang Kembali"
+            label="YA, SAYA MAU SMART AUDIT SYSTEM →" 
+            sublabel="Akses instan setelah pembayaran"
           />
         </div>
 
@@ -73,15 +91,12 @@ export const CleanHero: React.FC = () => {
               
               if (stage === 0) {
                 target.dataset.stage = '1';
-                // Fallback stage 1: direct remote URL (ImgBB)
                 target.src = 'https://i.ibb.co.com/xqtkxhYg/Chat-GPT-Image-Sep-22-2026-10-04-25-PM.png';
               } else if (stage === 1) {
                 target.dataset.stage = '2';
-                // Fallback stage 2: smartbook.id verified CDN
                 target.src = 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg';
               } else if (stage === 2) {
                 target.dataset.stage = '3';
-                // Fallback stage 3: SVG bundle
                 target.src = '/images/hero-mockup-bundle.svg';
               }
             }}

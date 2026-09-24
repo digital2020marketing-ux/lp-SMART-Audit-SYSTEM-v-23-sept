@@ -28,9 +28,9 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         href={getCheckoutUrl()}
         onClick={handleClick}
         aria-label={label}
-        className="w-full min-h-[54px] px-4 py-3.5 bg-gradient-to-r from-amber-400 via-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 active:scale-[0.99] text-slate-950 font-black text-[16.5px] sm:text-[17.5px] rounded-2xl flex items-center justify-center text-center shadow-lg shadow-amber-400/25 border-2 border-amber-500/80 tracking-tight leading-tight transition-all duration-150"
+        className="w-full min-h-[54px] px-4 py-3.5 bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-[0.99] text-white font-black text-[16.5px] sm:text-[17.5px] rounded-2xl flex items-center justify-center text-center shadow-lg shadow-red-600/30 border-2 border-red-500/90 tracking-tight leading-tight transition-all duration-150 cursor-pointer"
       >
-        <span className="drop-shadow-xs">{label}</span>
+        <span className="drop-shadow-sm">{label}</span>
       </a>
 
       {sublabel && (
