@@ -23,6 +23,12 @@
   .animate-shimmer-sweep {
     animation: cta-shimmer 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
+
+  /* Offscreen rendering optimization: skips layout and paint of below-the-fold blocks until scrolled near */
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 600px;
+  }
 }
 
 html {

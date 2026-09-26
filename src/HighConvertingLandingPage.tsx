@@ -34,40 +34,62 @@ export const HighConvertingLandingPage: React.FC = () => {
         <CleanProblem />
 
         {/* SECTION 3 — BRIDGING */}
-        <CleanSolution />
+        <div className="content-auto">
+          <CleanSolution />
+        </div>
 
         {/* SECTION 4 — PROOF PRODUK */}
-        <CleanProductVisuals />
+        <div className="content-auto">
+          <CleanProductVisuals />
+        </div>
 
         {/* SECTION 4B — 9 VIDEO DEMONSTRASI (NON-AUTOPLAY) */}
         <CleanVideoShowcase />
 
         {/* SECTION 5 — BENEFIT */}
-        <CleanAuditFlow />
+        <div className="content-auto">
+          <CleanAuditFlow />
+        </div>
 
         {/* SECTION 6 — WHAT YOU GET */}
-        <CleanProductContents />
+        <div className="content-auto">
+          <CleanProductContents />
+        </div>
 
         {/* SECTION 7 — SOCIAL PROOF */}
-        <CleanTestimonials />
+        <div className="content-auto">
+          <CleanTestimonials />
+        </div>
 
         {/* SECTION 8 — TARGET MARKET */}
-        <CleanTargetAudience />
+        <div className="content-auto">
+          <CleanTargetAudience />
+        </div>
 
         {/* SECTION 9 — VALUE STACK */}
-        <CleanOffer />
+        <div className="content-auto">
+          <CleanOffer />
+        </div>
 
         {/* SECTION 10 — HANDLING OBJECTION */}
-        <CleanCostComparison />
+        <div className="content-auto">
+          <CleanCostComparison />
+        </div>
 
         {/* SECTION 11 — GUARANTEE */}
-        <CleanGuarantee />
+        <div className="content-auto">
+          <CleanGuarantee />
+        </div>
 
         {/* SECTION 12 — FAQ */}
-        <CleanFaq />
+        <div className="content-auto">
+          <CleanFaq />
+        </div>
 
         {/* SECTION 13 — FINAL CLOSE */}
-        <CleanFinalCta />
+        <div className="content-auto">
+          <CleanFinalCta />
+        </div>
       </main>
 
       {/* Floating Sticky Buy Button for Mobile Users */}

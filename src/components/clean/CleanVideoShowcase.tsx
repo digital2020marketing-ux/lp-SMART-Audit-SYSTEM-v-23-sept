@@ -11,7 +11,7 @@ export const CleanVideoShowcase: React.FC = () => {
   };
 
   return (
-    <section id="video-demo-section" className="w-full bg-slate-900 text-white py-8 sm:py-10 px-4 sm:px-5 border-b border-slate-800">
+    <section id="video-demo-section" className="w-full bg-slate-900 text-white py-8 sm:py-10 px-4 sm:px-5 border-b border-slate-800 content-auto">
       <div className="w-full text-left">
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-950/80 border border-red-700/60 text-red-300 text-[11px] font-extrabold tracking-wider uppercase mb-2">
@@ -77,11 +77,12 @@ export const CleanVideoShowcase: React.FC = () => {
                 <div className="rounded-xl overflow-hidden bg-black border border-slate-700/80 aspect-video relative flex items-center justify-center">
                   {isPlayingThis ? (
                     <iframe
-                      src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0&modestbranding=1`}
+                      src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&modestbranding=1`}
                       title={video.title}
                       className="w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      loading="lazy"
                     />
                   ) : (
                     <div
@@ -89,7 +90,14 @@ export const CleanVideoShowcase: React.FC = () => {
                       className="relative w-full h-full cursor-pointer group flex flex-col items-center justify-center text-center p-2.5"
                     >
                       <img
-                        src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                        src={`/images/yt-thumbs/${video.id}.jpg`}
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.dataset.fallback) {
+                            target.dataset.fallback = '1';
+                            target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                          }
+                        }}
                         alt={video.title}
                         width={480}
                         height={270}
