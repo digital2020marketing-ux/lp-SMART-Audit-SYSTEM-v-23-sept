@@ -79,36 +79,35 @@ export const CleanHero: React.FC = () => {
         </div>
 
         {/* Hero Product Mockup — Langsung Muncul Setelah CTA, Minimal Sebagian Terlihat Above the Fold */}
-        <div className="w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-md bg-slate-50">
-          <picture className="block w-full">
-            <source media="(max-width: 480px)" srcSet="/images/hero-mockup-sas-mobile.webp" type="image/webp" />
-            <source media="(min-width: 481px)" srcSet="/images/hero-mockup-sas.webp" type="image/webp" />
-            <img
-              src="/images/hero-mockup-sas.webp"
-              alt="Mockup SMART AUDIT SYSTEM — 9 Modul, 7 Worksheet, 5 AI Tools"
-              width={720}
-              height={460}
-              className="w-full h-auto object-cover block"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              onError={(e) => {
-                const target = e.currentTarget;
-                const stage = parseInt(target.dataset.stage || '0', 10);
-                
-                if (stage === 0) {
-                  target.dataset.stage = '1';
-                  target.src = 'https://i.ibb.co.com/xqtkxhYg/Chat-GPT-Image-Sep-22-2026-10-04-25-PM.png';
-                } else if (stage === 1) {
-                  target.dataset.stage = '2';
-                  target.src = 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg';
-                } else if (stage === 2) {
-                  target.dataset.stage = '3';
-                  target.src = '/images/hero-mockup-bundle.svg';
-                }
-              }}
-            />
-          </picture>
+        <div className="w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-md bg-slate-50 min-h-[220px] flex items-center justify-center">
+          <img
+            src="/images/hero-mockup-sas.webp"
+            alt="Mockup SMART AUDIT SYSTEM — 9 Modul, 7 Worksheet, 5 AI Tools"
+            width={720}
+            height={460}
+            className="w-full h-auto object-cover block"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            onError={(e) => {
+              const target = e.currentTarget;
+              const stage = parseInt(target.dataset.stage || '0', 10);
+              
+              if (stage === 0) {
+                target.dataset.stage = '1';
+                target.src = '/images/hero-mockup-sas.jpg';
+              } else if (stage === 1) {
+                target.dataset.stage = '2';
+                target.src = 'https://i.ibb.co.com/xqtkxhYg/Chat-GPT-Image-Sep-22-2026-10-04-25-PM.png';
+              } else if (stage === 2) {
+                target.dataset.stage = '3';
+                target.src = 'https://smartbook.id/kumpulan-gambar/gambar-dashbord-SAS.jpg';
+              } else if (stage === 3) {
+                target.dataset.stage = '4';
+                target.src = '/images/hero-mockup-bundle.svg';
+              }
+            }}
+          />
         </div>
       </div>
     </section>
