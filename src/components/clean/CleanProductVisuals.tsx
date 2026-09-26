@@ -118,12 +118,20 @@ export const CleanProductVisuals: React.FC = () => {
         </div>
 
         {/* CTA Strategis: Setelah Product Proof */}
-        <div className="w-full">
+        <div className="w-full space-y-2.5">
           <CtaButton
             position="after_product_proof"
             label="SAYA MAU AKSES SISTEM INI →"
             sublabel="Akses Langsung — Rp99.000 Sekali Bayar"
           />
+
+          <a
+            href="#video-demo-section"
+            className="w-full py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-[12.5px] font-bold flex items-center justify-center gap-1.5 transition-colors text-center"
+          >
+            <span>📹 Ingin lihat isi sistem langsung?</span>
+            <span className="text-blue-700 font-extrabold underline">Tonton 9 Video Rekaman Layar ↓</span>
+          </a>
         </div>
       </div>
     </section>

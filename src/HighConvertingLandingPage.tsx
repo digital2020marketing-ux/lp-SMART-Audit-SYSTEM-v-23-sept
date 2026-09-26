@@ -3,6 +3,7 @@ import { CleanHero } from './components/clean/CleanHero';
 import { CleanProblem } from './components/clean/CleanProblem';
 import { CleanSolution } from './components/clean/CleanSolution';
 import { CleanProductVisuals } from './components/clean/CleanProductVisuals';
+import { CleanVideoShowcase } from './components/clean/CleanVideoShowcase';
 import { CleanAuditFlow } from './components/clean/CleanAuditFlow';
 import { CleanProductContents } from './components/clean/CleanProductContents';
 import { CleanTestimonials } from './components/clean/CleanTestimonials';
@@ -37,6 +38,9 @@ export const HighConvertingLandingPage: React.FC = () => {
 
         {/* SECTION 4 — PROOF PRODUK */}
         <CleanProductVisuals />
+
+        {/* SECTION 4B — 9 VIDEO DEMONSTRASI (NON-AUTOPLAY) */}
+        <CleanVideoShowcase />
 
         {/* SECTION 5 — BENEFIT */}
         <CleanAuditFlow />
